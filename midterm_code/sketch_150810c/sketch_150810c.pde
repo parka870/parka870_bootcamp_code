@@ -1,8 +1,7 @@
 //Global Variables
 float angle =0.0;
-float offset = 30;
-float speed = 0.005;
-int winSize = 510;
+
+
 PImage myImage;
 
 
@@ -23,7 +22,7 @@ void setup(){
 void draw(){
   
   
-  fill(#);
+  fill(#009999);
   translate(mouseX, mouseY);
   rotate(angle);
   rect(-15,-15,30,30);
