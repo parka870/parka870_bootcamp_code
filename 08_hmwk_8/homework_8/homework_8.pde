@@ -1,41 +1,51 @@
 
 //How we define an array of Bubbles
-int numElements= 100;
-Bubble [] bubbles = new Bubble [numElements];
 PImage myImage;
+int numElements= 5000;
+Bubble [] bubbles = new Bubble [numElements];
+
 
 void setup(){
   
-  myImage = loadImage("kim_portrait.jpg");
+  myImage = loadImage("frames_kim.jpg");
   
-  size(525, 660);
+  size(510, 660);
   smooth();
   imageMode(CENTER);
-  image(myImage, width/2, height/2, 525, 660);
+  
   
  //Initialize my array
  for (int i = 0; i < numElements; i++){
  
-   bubbles[i] = new Bubble(random(0,600), random(0,600), random(1,20), random(255), random(255), random(255));
+  bubbles[i] = new Bubble(random(0,525), random(0,660), random(0.0001, 1), random(255), random(0), random(100));
  }
 }
 
 
 void draw(){
   
-   background(255);
+   imageMode(CENTER);
+  image(myImage, width/2, height/2);
 
   for (int i = 0; i < numElements; i++){
   
-  bubbles[i].display();
-  bubbles[i].ascend();
-  bubbles[i].top();
-  
+ bubbles[i].display();
+ bubbles[i].ascend();
+ bubbles[i].top();
   }
-}
-void mousePressed(){
+
   
 }
+//if(mousePressed){ for(int i = 0; i < numElements; i++){
+  
+// bubbles[i].display();
+ //bubbles[i].ascend();
+ //bubbles[i].top();
+//  }
+
+
+//}
+
 
 
 

@@ -29,9 +29,9 @@ class Bubble{
   
   void display(){
   stroke(0);
-  strokeWeight(10);
+  strokeWeight(0);
   fill(r, g, b);
-  ellipse(x, y, 2*radius, 2*radius);
+  rect(x, y, 2*radius, 2*radius);
   }
   
   void top(){
